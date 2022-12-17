@@ -11,22 +11,16 @@ function createGallery(item) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `
+     <li>
       <a class="gallery__item" href="${original}">
       <img class="gallery__image" src="${preview}" alt="${description}" />
-    </a>`;
+    </a>
+    </li>`;
     })
     .join("");
 }
 
-galleryEl.addEventListener("click", (eve) => {
-  eve.preventDefault();
-
-  if (eve.target.nodeName !== "IMG") {
-    return;
-  }
-
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionsDelay: 250,
-  });
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
 });
