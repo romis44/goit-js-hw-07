@@ -43,15 +43,3 @@ galleryEl.addEventListener("click", (eve) => {
 
   instance.show();
 });
-
-// galleryEl.addEventListener("click", galleryImgOnClick);
-
-// function galleryImgOnClick(event) {
-//   if (!event.target.classList.contains("gallery__image")) {
-//     return;
-//   }
-//   //   event.target.classList.add(".gallery__link");
-//   const parentGallery = event.target.closest(".gallery__item");
-//   parentGallery.classList.add(".gallery__link");
-
-//   console.log(parentGallery);
